@@ -1,10 +1,10 @@
-import { RxjsErrAsyncPipePage } from './app.po';
+import { UpgradeprojPage } from './app.po';
 
-describe('rxjs-err-async-pipe App', function() {
-  let page: RxjsErrAsyncPipePage;
+describe('upgradeproj App', () => {
+  let page: UpgradeprojPage;
 
   beforeEach(() => {
-    page = new RxjsErrAsyncPipePage();
+    page = new UpgradeprojPage();
   });
 
   it('should display message saying app works', () => {

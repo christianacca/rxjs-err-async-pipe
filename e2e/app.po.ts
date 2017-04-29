@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class RxjsErrAsyncPipePage {
+export class UpgradeprojPage {
   navigateTo() {
     return browser.get('/');
   }
