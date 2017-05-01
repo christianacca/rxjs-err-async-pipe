@@ -1,9 +1,13 @@
+import 'rxjs/add/observable/interval';
+
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/share';
+import 'rxjs/add/operator/observeOn';
 
 import { Component, ErrorHandler, OnInit } from '@angular/core';
-import { Observable, Scheduler } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { asap } from 'rxjs/scheduler/asap';
 
 @Component({
   selector: 'app-rxjs-err-async-pipe',
@@ -25,7 +29,7 @@ export class RxjsErrAsyncPipeComponent implements OnInit {
     this.ticks$ = Observable.interval(1000)
       .take(10)
       .share()
-      .observeOn(Scheduler.asap);
+      .observeOn(asap);
       
     this.mapped$ = this.ticks$.map(value => {
       if (value === 3) {
