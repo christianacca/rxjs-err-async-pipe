@@ -5,17 +5,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DelegatingErrorHandler } from './delegating-error-handler.service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RxjsErrAsyncPipeComponent } from './rxjs-err-async-pipe/rxjs-err-async-pipe.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RxjsErrAsyncPipeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [{ provide: ErrorHandler, useClass: DelegatingErrorHandler }],
   bootstrap: [AppComponent]
